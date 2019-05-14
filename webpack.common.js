@@ -20,10 +20,20 @@ module.exports = {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
-            // {
-            //     test: /\.html$/,eE
-            //     use: [ new HTML]
-            // }
+            {
+                test: /\.html$/,
+                use: ['html-loader']
+            },
+            {
+                test: /\.(png|gif|svg|jpg)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: 'imgs',
+                        name: '[name].[hash].[ext]'
+                    }
+                }
+            }
         ]
     }
 }
