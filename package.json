@@ -1,59 +1,35 @@
 {
   "name": "nagyi-app",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "In which I try to include my learning almost every day, but in worst case weekly.",
+  "main": "index.js",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "deploy": "gh-pages-deploy",
-    "clean-source": "rimraf README.md src webroot package.json"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "test": "jest"
   },
-  "private": true,
-  "dependencies": {
-    "@angular/animations": "~7.1.0",
-    "@angular/common": "~7.1.0",
-    "@angular/compiler": "~7.1.0",
-    "@angular/core": "~7.1.0",
-    "@angular/forms": "~7.1.0",
-    "@angular/platform-browser": "~7.1.0",
-    "@angular/platform-browser-dynamic": "~7.1.0",
-    "@angular/router": "~7.1.0",
-    "core-js": "^2.5.4",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "rxjs": "~6.3.3",
-    "tslib": "^1.9.0",
-    "zone.js": "~0.8.26"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smiska/nagyi-app.git"
   },
+  "author": "Mihaly Saroy <saroy.mihaly@gmail.com> (https://github.com/smiska)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smiska/nagyi-app/issues"
+  },
+  "homepage": "https://github.com/smiska/nagyi-app#readme",
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.13.1",
-    "@angular/cli": "~7.1.4",
-    "@angular/compiler-cli": "~7.1.0",
-    "@angular/language-service": "~7.1.0",
-    "@types/jasmine": "~2.8.8",
-    "@types/jasminewd2": "~2.0.3",
-    "@types/node": "~8.9.4",
-    "codelyzer": "~4.5.0",
-    "gh-pages-deploy": "^0.5.1",
-    "jasmine-core": "~2.99.1",
-    "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~3.1.1",
-    "karma-chrome-launcher": "~2.2.0",
-    "karma-coverage-istanbul-reporter": "~2.0.1",
-    "karma-jasmine": "~1.1.2",
-    "karma-jasmine-html-reporter": "^0.2.2",
-    "protractor": "~5.4.0",
-    "ts-node": "~7.0.0",
-    "tslint": "~5.11.0",
-    "typescript": "~3.1.6"
-  },
-  "gh-pages-deploy": {
-    "staticpath": "dist",
-    "post": [
-      "clean-source"
-    ]
+    "bootstrap": "^4.3.1",
+    "clean-webpack-plugin": "^2.0.2",
+    "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1",
+    "webpack-merge": "^4.2.1"
   }
 }
