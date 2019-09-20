@@ -1,5 +1,8 @@
+import React from 'react'
+
 alert('App')
 
-export const run = (someService) => {
+export const App = (someService) => {
     someService.handleError()
+    return <button>I am app</button>
 }

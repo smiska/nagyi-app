@@ -25,6 +25,13 @@ module.exports = {
                         name: '[name].[hash].[ext]'
                     }
                 }
+            },
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: {
+                  loader: "babel-loader"
+                }
             }
         ]
     }
