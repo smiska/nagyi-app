@@ -1,5 +1,5 @@
 {
-  "name": "nagyi-app",
+  "name": "@smiska/nagyi-app",
   "version": "1.0.0",
   "description": "In which I try to include my learning almost every day, but in worst case weekly.",
   "main": "index.js",
@@ -33,6 +33,7 @@
     "popper.js": "^1.15.0",
     "react": "^16.8.6",
     "sass-loader": "^7.1.0",
+    "storybook": "^5.1.11",
     "style-loader": "^0.23.1",
     "webpack": "^4.31.0",
     "webpack-cli": "^3.3.2",
