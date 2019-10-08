@@ -4,6 +4,8 @@ const cookieSession = require('cookie-session')
 const passport = require('passport')
 const bodyParser = require('body-parser')
 const keys = require('./config/keys')
+const Buffer = require('safe-buffer').Buffer
+console.log(Buffer.prototype)
 
 require('./models/User')
 require('./models/Blog')
