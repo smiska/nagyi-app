@@ -1,2 +1,3 @@
-# AdvancedNodeStarter
-Starting project for a course on Advanced Node @ Udemy
+# Pet project
+
+In which I try to include my learning almost every day, but in worst case weekly.
