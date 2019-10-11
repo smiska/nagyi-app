@@ -4,6 +4,8 @@ const cookieSession = require('cookie-session')
 const passport = require('passport')
 const bodyParser = require('body-parser')
 const keys = require('./config/keys')
+const expressGraphQL = require('express-graphql')
+const schema = require('./schema/schema')
 
 require('./models/User')
 require('./models/Blog')
@@ -24,6 +26,11 @@ app.use(
 )
 app.use(passport.initialize())
 app.use(passport.session())
+
+app.use('/graphql', expressGraphQL({
+  schema,
+  graphiql: true
+}))
 
 require('./routes/authRoutes')(app)
 require('./routes/blogRoutes')(app)
