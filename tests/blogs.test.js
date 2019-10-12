@@ -4,7 +4,7 @@ let page
 
 beforeEach(async () => {
   page = await Page.build()
-  await page.goto('localhost:3000')
+  await page.goto('http://localhost:3000')
 })
 
 afterEach(async () => {
@@ -15,6 +15,7 @@ describe('When logged in and clicked new post button', () => {
   beforeEach(async () => {
     await page.login()
     await page.click('a[href="/blogs/new"]')
+    await page.waitFor('div form')
   })
 
   test('can see blog create form', async () => {
@@ -103,6 +104,5 @@ describe('When NOT logged in', () => {
     )
     expect(result).toEqual({ 'error': 'You must log in!' })
   })
-  // May also try it with direct API access without Chromium context for security
 
 })

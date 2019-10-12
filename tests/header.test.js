@@ -12,7 +12,7 @@ afterEach(async () => {
 
 describe('Main header tests', () => {
   beforeEach(async () => {
-    await page.goto('localhost:3000')
+    await page.goto('http://localhost:3000')
   })
 
   test('Header loads correctly', async () => {
